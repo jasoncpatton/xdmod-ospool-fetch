@@ -1,6 +1,6 @@
 FROM opensciencegrid/software-base:23-el9-release
 
-RUN yum install -y rsync && \
+RUN yum install -y rsync openssh-clients && \
 yum clean all && \
 rm -rf /var/cache/yum/
 
