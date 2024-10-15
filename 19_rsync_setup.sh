@@ -5,7 +5,7 @@ set -u
 
 RSYNC_KEYS_CONFIG_DIR=${RSYNC_KEYS_CONFIG_DIR:-/mnt/ssh-keys-config}
 
-mode="$1"
+mode="${1:-init}"
 if [[ "$mode" != "cron" ]]; then
     mkdir -p /root/.ssh
     chmod 700 /root/.ssh
